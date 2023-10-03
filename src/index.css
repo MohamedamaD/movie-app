@@ -1,13 +1,80 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  text-transform: capitalize;
+  border: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --primary-color: #e50914;
+  --dark-primary-color: #bf000a;
+  --white-color: #ffffff;
+  --text-color: #d1d0cf;
+  --body-background-color: #141414;
+  --black-color: #111111;
+  --blur: 2px;
+  --radius: 0.25rem;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  height: 5000px;
+}
+
+body.dark {
+  --primary-color: #00f;
+}
+
+::selection {
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  /*set background here*/
+}
+
+::-webkit-scrollbar-thumb {
+  /*set background here*/
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /*change background here*/
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }

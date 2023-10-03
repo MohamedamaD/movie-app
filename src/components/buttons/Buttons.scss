@@ -1,0 +1,31 @@
+button.__flat-button {
+    color: var(--white-color);
+    background-color: var(--dark-primary-color);
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: larger;
+    overflow: hidden;
+
+    letter-spacing: 1px;
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    transition: 0.3s linear;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        transition: 0.3s linear;
+        background-color: var(--primary-color);
+    }
+
+    &:hover::before {
+        transform: scaleX(0);
+    }
+}
