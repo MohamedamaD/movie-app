@@ -22,9 +22,12 @@ body {
   --text-color: #d1d0cf;
   --body-background-color: #141414;
   --black-color: #111111;
+
   --blur: 2px;
   --radius: 0.25rem;
-  font-family: 'Roboto', sans-serif;
+
+  font-family: 'Roboto',
+    sans-serif;
   position: relative;
   height: 5000px;
 }
@@ -77,4 +80,17 @@ body.dark {
   .container {
     width: 1170px;
   }
+}
+
+
+.__google {
+  background-color: #db4437 !important;
+}
+
+.__amazon {
+  background-color: #ff9900 !important;
+}
+
+.__linkedin {
+  background-color: #007bb6 !important;
 }
