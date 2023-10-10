@@ -1,6 +1,11 @@
 import "./App.scss";
+import { Header } from "./containers";
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Header />
+    </div>
+  );
 }
 
 export default App;
