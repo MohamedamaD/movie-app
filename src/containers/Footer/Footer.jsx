@@ -5,102 +5,101 @@ import {
   BiLogoInstagram,
   BiLogoTwitter,
 } from "react-icons/bi";
-import Logo from "../../assets/logo.png";
+
 import { FlatButton, Input } from "../../components";
-const data = [
-  {
-    id: 1,
-    title: "Quick Links",
-    link1: "About Us",
-    link2: "Blog",
-    link3: "Pricing",
-    link4: "FAQ",
-  },
-  {
-    id: 2,
-    title: "Movies To Watch",
-    link1: "Top Trending",
-    link2: "Recommended",
-    link3: "Popular",
-  },
-  {
-    id: 2,
-    title: "About Company",
-    link1: "Contact",
-    link2: "Privacy Policy",
-    link3: "Terms Of Use",
-  },
-];
+import { images } from "../../constants/images";
+import { aboutCompany, movies, quicklinks } from "../../constants";
+
 export const Footer = () => {
   return (
     <div className="_footer">
-      <div className="_footer_top_part">
-        <div className="_footer_desc">
-          <img src={Logo} alt="logo" />
-          <p>Emailus:customer@stremit.com</p>
-          <p>COSTUMER SERVICES</p>
-          <h1>+(480)555-0103</h1>
-        </div>
-        <div className="links">
-          {data.map((item) => {
-            return (
-              <div>
-                <h2>{item.title}</h2>
-                <ul>
-                  <li>
-                    <a href="#">{item.link1}</a>
-                  </li>
-                  <li>
-                    <a href="#">{item.link2}</a>
-                  </li>
-                  <li>
-                    <a href="#">{item.link3}</a>
-                  </li>
-                  <li>
-                    <a href="#">{item.link4}</a>
-                  </li>
-                </ul>
-              </div>
-            );
-          })}
+      <div className="_footer_wrapper">
+        <div className="_footer_top_part">
+          <div className="_footer_desc">
+            <img src={images.LOGO} alt="logo" />
+            <p>Emailus:customer@stremit.com</p>
+            <p>COSTUMER SERVICES</p>
+            <h1>+(480)555-0103</h1>
+          </div>
+
+          <div className="links">
+            <h1>quick links</h1>
+            <ul>
+              {quicklinks.map((item, i) => (
+                <li>
+                  {" "}
+                  <a href={item} key={i}>
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="links">
+            <h1>movie to whatch</h1>
+            <ul>
+              {movies.map((item, i) => (
+                <li>
+                  {" "}
+                  <a href={item} key={i}>
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="links">
+            <h1>about company</h1>
+            <ul>
+              {aboutCompany.map((item, i) => (
+                <li>
+                  <a href={item} key={i}>
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="_footer_subscribe">
+            <h2>Subscribe </h2>
+            <div className="_footer_input">
+              <Input type="text" placeholder="Email" />
+              <FlatButton value="SUBSCRIBE" />
+            </div>
+            <span>
+              <a href="">
+                <BiLogoFacebookCircle />
+              </a>
+            </span>
+            <span>
+              <a href="">
+                <BiLogoInstagram />
+              </a>
+            </span>
+            <span>
+              <a href="">
+                <BiLogoTwitter />
+              </a>
+            </span>
+          </div>
         </div>
 
-        <div className="_footer_subscribe">
-          <h2>Subscribe Newletter</h2>
-          <div className="_footer_input">
-            <Input type="text" placeholder="Email" />
-            <FlatButton value="SUBSCRIBE" />
+        <div className="_footer_bottom_part">
+          <div className="_footer_left_part">
+            <a href="#">Term Of Use</a>
+            <a href="#"> Privacy Policy</a>
+            <a href="#">Blog</a>
+            <a href="#">FAQ</a>
+            <a href="#">Watch List</a>
+            <p>
+              2023 <span>STAREAMIT</span>.All Right Reserved.All Viedos and show
+              on platform are trademarks of,and all realted images and content
+              are the property of, Stream Inc. Duplicated and copy of this is
+              stricity prohibited.
+            </p>
           </div>
-          <div>
-            <span>Follow Us:</span>
-            <a href="#">
-              {" "}
-              <BiLogoFacebookCircle className="_footer_icon" />
-            </a>
-            <a href="#">
-              <BiLogoInstagram className="_footer_icon" />
-            </a>
-            <a href="#">
-              {" "}
-              <BiLogoTwitter className="_footer_icon" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="_footer_bottom_part">
-        <div className="_footer_left_part">
-          <a href="#">Term Of Use</a>
-          <a href="#"> Privacy Policy</a>
-          <a href="#">Blog</a>
-          <a href="#">FAQ</a>
-          <a href="#">Watch List</a>
-          <p>
-            2023 <span>STAREAMIT</span>.All Right Reserved.All Viedos and show
-            on platform are trademarks of,and all realted images and content are
-            the property of, Stream Inc. Duplicated and copy of this is stricity
-            prohibited.
-          </p>
         </div>
       </div>
     </div>
