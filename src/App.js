@@ -1,19 +1,18 @@
 import "./App.scss";
-<<<<<<< HEAD
-import { Header } from "./containers";
+import { useSelector } from "react-redux";
+import { Footer, Header } from "./containers";
+import { Home, Loading } from "./pages";
 function App() {
+  const loading = useSelector((state) => state.loading.loading);
+
   return (
     <div className="App">
+      {/* {loading && <Loading />}
       <Header />
+      <Footer /> */}
+      <Home />
     </div>
   );
-=======
-import { Footer } from "./containers";
-function App() {
-  return <div className="App">
-    <Footer/>
-  </div>;
->>>>>>> 6089b8da7b5d39f278bcb4d173d1be5ddd482b75
 }
 
 export default App;

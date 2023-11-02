@@ -1,2 +1,3 @@
 export { images } from "./images";
-export { quicklinks, movies , aboutCompany} from './footerLinks'
+export { navLinks, pagesLinks } from "./navLinks";
+export { aboutCompany, movies, quickLinks, termsLinks } from "./footerLinks";
