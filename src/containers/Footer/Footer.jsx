@@ -23,65 +23,59 @@ export const Footer = () => {
           </div>
 
           <div className="links _footer_item">
-            <h1>quick links</h1>
+            <h1 className="__link-title">quick links</h1>
             <ul>
               {quickLinks.map((item, i) => (
-                <li>
-                  <a href={item} key={i}>
-                    {item}
-                  </a>
+                <li key={i}>
+                  <a href={item}>{item}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="links _footer_item">
-            <h1>movie to watch</h1>
+            <h1 className="__link-title">movie to watch</h1>
             <ul>
               {movies.map((item, i) => (
-                <li>
+                <li key={i}>
                   {" "}
-                  <a href={item} key={i}>
-                    {item}
-                  </a>
+                  <a href={item}>{item}</a>
                 </li>
               ))}
             </ul>
           </div>
           <div className="links _footer_item">
-            <h1>about company</h1>
+            <h1 className="__link-title">about company</h1>
             <ul>
               {aboutCompany.map((item, i) => (
-                <li>
-                  <a href={item} key={i}>
-                    {item}
-                  </a>
+                <li key={i}>
+                  <a href={item}>{item}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="_footer_subscribe _footer_item">
-            <h1>Subscribe </h1>
+            <h1 className="__link-title">Subscribe </h1>
             <div className="_footer_input">
               <Input type="text" placeholder="Email" />
               <FlatButton value="SUBSCRIBE" />
             </div>
-            <span>
               <a href="##">
-                <BiLogoFacebookCircle />
-              </a>
-            </span>
             <span>
-              <a href="##">
-                <BiLogoInstagram />
-              </a>
+                <BiLogoFacebookCircle size={25} />
             </span>
+              </a>
+              <a href="##">
             <span>
-              <a href="##">
-                <BiLogoTwitter />
-              </a>
+                <BiLogoInstagram size={25} />
             </span>
+              </a>
+              <a href="##">
+            <span>
+                <BiLogoTwitter size={25} />
+            </span>
+              </a>
           </div>
         </div>
 
